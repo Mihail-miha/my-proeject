@@ -41,6 +41,7 @@ body {
 
 /* Отступ для текста "Got it!" */
 .got-it {
+    max-width: 300px;
     padding-right: 55px;
     margin-left: auto; /* Перемещает элемент в правый угол */
     margin-right: 105px; /* Сдвигаем "Got it!" чуть левее */
@@ -57,6 +58,10 @@ body {
     padding: 0;
     margin: 0;
     list-style: none;
+    .logo-img{
+        width: 128px;
+        height: 23px;
+    }
 }
 
 /* Отступ сверху для всех элементов списка */
@@ -93,7 +98,7 @@ body {
 
 /* Эффект при наведении на кнопку */
 .btn-got-it:hover {
-    background-color: #f7b700;} /* Немного темнее жёлтого при наведении */
+    background-color: rgb(255, 255, 2);} /* Немного темнее жёлтого при наведении */
 
 .full-screen {
     position: relative;
@@ -470,113 +475,137 @@ p {
     transition: background-color 0.3s; /* Плавное изменение фона */
 }
 
-/* Для планшетов и ниже (до 1024px) */
-@media screen and (max-width: 1024px) {
+@media (max-width: 768px) {
+    body{
+        header{
+            width: 756px;
+            height: 135px;
+        }
+    }
     .nav-list {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        width: 746px;
+        height: 115px;
+
+        padding-left: 40px;
     }
 
+    .nav-list-2 {
+        padding-top: 25px;
+        padding-left: 75px;
+        margin: 50px;
+        gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+.text-left{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+    .got-it {
+        margin-right: 78px;
+        padding-right: 0;
+    }
     .square {
         grid-template-columns: 1fr;
-    }
-
-    .square_black-1,
-    .square_black-2,
-    .square_black-3 {
-        font-size: 60px;
-        text-align: center;
-        padding: 40px 10px;
+        .button-black{
+            margin-left: 204px;
+        }
     }
 
     .square_blue,
+    .square_black-1,
+    .square_black-2,
     .square_green,
-    .square_orange {
-        padding: 30px 20px;
-    }
-
-    .button-black {
-        margin: 20px auto 0;
-    }
-
-    .artist-gallery .gallery-row {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .artist-gallery .card {
-        max-width: 100%;
-    }
-
-    .full-screen h1 {
-        font-size: 80px;
-        line-height: 90px;
-        padding: 0 20px;
-    }
-
-    .highlight-table {
-        padding: 0 10px;
-    }
-
-    .highlight-row {
-        flex-direction: column;
+    .square_orange,
+    .square_black-3 {
+        min-width: 100%;
+        font-size: 36px !important;
+        padding: 20px;
         text-align: center;
-        gap: 5px;
-        margin-bottom: 20px;
     }
 
-    .logo-img {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-
-/* Для мобильных устройств (до 768px) */
-@media screen and (max-width: 768px) {
-    .full-screen img {
-        min-height: 400px;
-        object-fit: cover;
-    }
-
-    .full-screen h1 {
-        font-size: 48px;
-        top: 50px;
-        line-height: 55px;
-    }
 
     .square_blue h2,
     .square_green h2,
     .square_orange h2 {
-        font-size: 22px;
-        text-align: center;
+        font-size: 20px;
     }
 
     .square_blue p,
     .square_green p,
     .square_orange p {
         font-size: 14px;
-        padding: 0;
-        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .full-screen h1 {
+        font-size: 60px;
+        line-height: 70px;
+        top: 50px;
+        margin-top: 80px;
+        padding: 0 10px;
+    }
+
+    .logo-img {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .artist-gallery .gallery-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .artist-gallery .card {
+        max-width: 100%;
+    }
+
+    .highlight-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
     }
 
     .highlight-row span {
+        flex: unset;
+        width: 100%;
+        text-align: left;
+    }
+
+    .black-footer h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+    .square_orange{
+        h2 {
+            margin-left: 141px;
+        }
+        p {
+            margin-left: 130px;
+        }
+        .button-black {
+            margin-left: 222px;
+        }
+    }
+
+    .button-black-footer {
+        margin: 10px auto;
         display: block;
-        margin-bottom: 5px;
+        width: 30%;
+        text-align: center;
+
     }
 
-    .btn-got-it {
-        font-size: 14px;
-        padding: 8px 16px;
+    .nav-arrows {
+        justify-content: center;
     }
 
-    .nav-list li {
-        margin-top: 10px;
-    }
-
-    .gallery-title,
-    .highlights-title {
-        font-size: 1.8rem;
+    .arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
     }
 }
-
